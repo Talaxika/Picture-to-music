@@ -65,7 +65,7 @@ train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 }
 ```
 
-## Applications
-clean_data.py was used to clean up the matching files, by removing missing images and filtering by scores.
-
-data_preparation.ipynb is the notebook with the above mentioned work inside.
+## Code
+`data_cleanup.py` was used to clean up the matching files, by removing missing images and filtering by scores.\
+`data_preparation_colab.ipynb` is the notebook with the data loading and preparation when using google colab.\
+`data_preparation_kaggle.ipynb` is the notebook with the data loading and preparation when using kaggle.\
