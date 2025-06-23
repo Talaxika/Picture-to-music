@@ -22,7 +22,7 @@ from huggingface_hub import hf_hub_download
 from picture_to_music import PictureToMusicModel, PictureToMusicConfig
 import torch, json
 
-# # Load config from hugging face
+# Load config from hugging face
 config_path = hf_hub_download("Pesho564/Picture-to-music", "config.json")
 with open(config_path) as f:
      config = json.load(f)
