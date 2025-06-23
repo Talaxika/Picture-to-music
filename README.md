@@ -9,8 +9,11 @@ For the used dataset, check out the [data folder](https://github.com/Talaxika/Pi
 
 ## Code and weights
 
-The [github repo](https://github.com/Talaxika/Picture-to-music/tree/main) consists of the training and inference code for the model.\
-...\
+The [github repo](https://github.com/Talaxika/Picture-to-music/tree/main) consists of the training and inference code for the model:
+  - *training_kaggle.ipynb* - the training code + data loading but only for kaggle (it's basically the same for colab, follow the guide in the [data folder](https://github.com/Talaxika/Picture-to-music/tree/main/data))
+  - *inference/* - this folder contains an example notebook and more information on inferencing the model and using it for a music retrieval task
+
+
 The [hugging face repo](https://huggingface.co/Pesho564/Picture-to-music) has the:
   - *model weights* - `model_state_dict.bin`
   - *model config file* (it is used to initialize the model in code with the right hyperparams) - `config.json`
