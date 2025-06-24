@@ -15,10 +15,11 @@ The [github repo](https://github.com/Talaxika/Picture-to-music/tree/main) consis
 
 
 The [hugging face repo](https://huggingface.co/Pesho564/Picture-to-music) has the:
-  - *model weights* - `model_state_dict.bin`
+  - *model weights for the first version of the model* - `model_state_dict_1.bin`
+  - *model weights for the second version of the model* - `model_state_dict_2.bin`
   - *model config file* (it is used to initialize the model in code with the right hyperparams) - `config.json`
 
-To use the model for inference, download the `model_state_dict.bin` and `config.json` files.
+To use the model for inference, download the `model_state_dict_xxx.bin` and `config.json` files.
 Then you can inference the model like this:
 ```python
 from huggingface_hub import hf_hub_download
@@ -35,7 +36,7 @@ config_class = PictureToMusicConfig(**config)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load weights
-weights_path = hf_hub_download("Pesho564/Picture-to-music", "model_state_dict.bin")
+weights_path = hf_hub_download("Pesho564/Picture-to-music", "model_state_dict_1.bin")
 model = PictureToMusicModel(config_class).to(device)
 model.load_state_dict(torch.load(weights_path))
 
